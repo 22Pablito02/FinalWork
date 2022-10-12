@@ -7,15 +7,15 @@ PrintArr(SearchSmallValue(StartArr, FinishArr));
 string[] SearchSmallValue(string[] SArr, string[] FArr)
 {
     int j = 0;
-    for (int i = 0; i < StartArr.Length; i++)
+    for (int i = 0; i < SArr.Length; i++)
     {
-        if (StartArr[i].Length <= 3)
+        if (SArr[i].Length <= 3)
         {
-            FinishArr[j] = StartArr[i];
+            FArr[j] = SArr[i];
             j++;
         }
     }
-    return FinishArr;
+    return FArr;
 }
 
 void PrintArr(string[] arr)
