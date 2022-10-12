@@ -1,17 +1,27 @@
 ﻿
-string[] StartArr = {"lol", "news", "kek", "abcd", "1", "100000"};
-int len = StartArr.Length;
-string[] FinishArr = new string[len];
+string[] StartArr = { "You", "news", "go", "abcd", "od", "100000", "man", "qwert", "!" };
+string[] FinishArr = new string[StartArr.Length];
 
-int j = 0;
+PrintArr(SearchSmallValue(StartArr, FinishArr));
 
-for(int i = 0; i < StartArr.Length; i++){
-    if(StartArr[i].Length <= 3){
-        FinishArr[j] = StartArr[i];
-        j++;
+string[] SearchSmallValue(string[] SArr, string[] FArr)
+{
+    int j = 0;
+    for (int i = 0; i < StartArr.Length; i++)
+    {
+        if (StartArr[i].Length <= 3)
+        {
+            FinishArr[j] = StartArr[i];
+            j++;
+        }
     }
+    return FinishArr;
 }
 
-for(int i = 0; i < FinishArr.Length; i++){
-    Console.Write($"{FinishArr[i]} ");
+void PrintArr(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
 }
